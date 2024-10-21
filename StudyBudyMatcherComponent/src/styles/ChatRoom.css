@@ -1,0 +1,113 @@
+.chat-room {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\ecochatroom.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.leave-button {
+  background-color: red;
+  color: azure;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer; /* Changes the cursor to a pointer when hovering */
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+.leave-button:hover {
+  background-color: darkred; /* Change this to your desired hover color */
+  color: lightblue; /* Optional: change text color on hover */
+}
+
+.leave-button-area {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Optionally centers the button vertically */
+}
+
+
+.chat-room-heading {
+  color: rgb(0, 77, 81);
+  background-color: rgba(94, 194, 157, 0.7); /* Keep translucent background */
+  padding: 10px; /* Add padding for spacing */
+  border: 2px solid rgb(28, 103, 99); /* Add border to the text */
+  width: 50%; /* Adjust the width percentage as needed */
+  margin: 0 auto; /* Center the box horizontally */
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
+  text-align: center; /* Center the text */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.message-area {
+  margin-right: 5cm;
+  margin-left: 5cm;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 40vh; /* Adjusted height */
+  overflow-y: auto;
+  background-color: rgba(105, 159, 90, 0.8); /* Make messages more readable */
+  border-radius: 10px;
+  }
+  
+  .message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .sent-message {
+    align-self: flex-end;
+    background-color: #67c615;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .received-message {
+    align-self: flex-start;
+    background-color: #17540e;
+    color: white;
+    font-size: 20px;
+  }
+  
+  
+  .input-area {
+    display: flex;
+    padding: 5px;
+    background-color: #508800;
+    border-radius: 10px;
+    margin-bottom: 0.5cm;
+  }
+  
+  .input-area-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #eeff00;
+    background-color: #94fd00;
+    font-size: 20px;
+  }
+  
+  .input-area-button {
+    padding: 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #fff700;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .input-area-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

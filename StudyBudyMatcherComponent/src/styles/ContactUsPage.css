@@ -1,0 +1,55 @@
+.contact-us-page {
+    background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\EcoContactUs.png');
+    background-repeat: no-repeat; /* Ensure the logo doesn't repeat */
+    background-position: center; /* Center the logo */
+    background-size: contain;
+    background-color: black; /* Fallback for no image */
+    min-height: 84.2vh; /* Ensure full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px; /* Limit max width */
+    text-align: center;
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+}
+
+.contact-us-page h1 {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(68, 61, 1);
+}
+
+.contact-us-page p, .contact-us-page a {
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 26px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #003d3a;
+}
+
+.contact-us-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us-page ul li {
+    margin-bottom: 10px;
+}
+
+.contact-us-page a {
+    color: rgb(144, 139, 3);
+    text-decoration: none;
+}
+
+.contact-us-page a:hover {
+    text-decoration: underline;
+}

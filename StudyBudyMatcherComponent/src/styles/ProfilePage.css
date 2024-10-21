@@ -1,0 +1,102 @@
+.profile-page {
+    background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\ecosystemProfile.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: top;
+}
+
+.friends-list-names {
+    color: #ffffff; /* Change the color to white */
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none; /* Remove the underline from the links */
+}
+
+/* To ensure that the links don't revert to default styles on hover */
+.friends-list-names:hover {
+    color: #ffcc00; /* Optional: Change color on hover */
+    text-decoration: none;
+}
+
+.connect-friends-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.connect-friends-button:hover {
+    background-color: black;
+    color: yellow;
+}
+
+.welcomeUser{
+    font-size: 50px;
+}
+
+.userInterests{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.friends-list {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.friends-list h2 {
+    color: yellow;
+    font-size: 30px;
+    margin-bottom: 0.2cm;
+}
+
+.friends-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.friends-list li {
+    padding: 5px 0;
+    color: white;
+}
+
+
+.delete-account-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .delete-account-button:hover {
+    background-color: darkred;
+  }
+  
+  /* Styling for the Bio section */
+.profile-bio {
+    font-size: 20px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Styling for the Location section */
+.profile-location {
+    font-size: 20px;
+    margin-top: 5px;
+    color: yellow;
+}

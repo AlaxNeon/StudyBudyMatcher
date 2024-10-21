@@ -1,0 +1,93 @@
+.friends-page {
+    background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\ecosystem_hand_shake.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Adjust the layout to make elements stack */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    min-height: 84.2vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.search-box {
+    width: 60%; /* Adjust the width */
+    padding: 10px; /* Add padding for better appearance */
+    margin-bottom: 20px; /* Add margin to separate it from the list */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+}
+
+.people-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-height: 450px;
+    overflow-y: auto;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.heading {
+    color: #ffffff;
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    font-size: 3rem; /* Adjust the size as needed */
+    text-align: center; /* Center align the heading */
+    width: 60%; /* Ensure it spans the full width */
+}
+
+.no-friends-message{
+    color: #ffffff;
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    font-size: 3rem; /* Adjust the size as needed */
+    text-align: center; /* Center align the heading */
+}
+
+.person-card {
+    background-color: rgba(128, 128, 128, 0.5); /* Greyish background with transparency */
+    padding: 0px 10px 35px 20px;
+    border-radius: 10px;
+    width: 750px;
+    text-align: left;
+    color: white;
+    position: relative;
+}
+
+.fullName{
+    color: rgb(234, 255, 0);
+    font-size: 30px;
+    font-weight: 750;
+}
+
+.interest{
+    font-style: italic;
+    font-size: 20px;
+}
+
+.connect-button, .connected-button {
+    font-size: 20px;
+    position: absolute;
+    align-content: center;
+    bottom: 10px;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+}
+
+.connected-button {
+    background-color: gray; /* Different color to show it's already connected */
+    cursor: not-allowed;
+}

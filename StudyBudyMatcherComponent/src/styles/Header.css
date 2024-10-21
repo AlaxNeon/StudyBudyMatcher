@@ -1,0 +1,56 @@
+.eco2m-header {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-left: 1cm;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Allows the nav-links to take up remaining space and center themselves */
+}
+
+.nav-link {
+    color: rgb(0, 95, 9);
+    margin: 0px 35px; /* Adjust the spacing between links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.nav-link:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+
+.header-button {
+    margin-left: 0.6cm;
+    background-color: yellow; /* Yellow background */
+    color: black; /* Black text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Adjust padding for spacing */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.header-button:hover {
+    background-color: rgb(0, 0, 0); /* Change background on hover */
+    color: rgb(225, 255, 0); /* Change text color on hover */
+}

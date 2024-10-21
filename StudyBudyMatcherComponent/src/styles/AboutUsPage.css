@@ -1,0 +1,39 @@
+.about-us-page {
+    background-color: black; /* Set the background to black */
+    background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\Eco2MLogo.png');
+    background-repeat: no-repeat; /* Ensure the logo doesn't repeat */
+    background-position: center; /* Center the logo */
+    background-size: contain; /* Adjust logo size to fit within the background */
+    color: white; /* Set text color to white for visibility */
+    padding: 20px; /* Add some padding */
+    min-height: 79.2vh; /* Ensure the page takes the full height of the viewport */
+    text-align: center; /* Center the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.7); /* White background with transparency */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Slightly round the corners */
+    width: 80%; /* Adjust width, can be customized */
+    max-width: 900px; /* Limit the width */
+    text-align: center; /* Center the text inside */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.about-us-page h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(68, 61, 1);
+}
+
+
+.about-us-page p {
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 26px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #003d3a;
+}
