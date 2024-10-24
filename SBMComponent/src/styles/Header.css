@@ -1,13 +1,9 @@
 .sbm-header {
-    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
-    padding: 15px;
-    display: flex;
+    background: rgb(239, 238, 238); /* Gradient background */
+    padding: 5px;
     align-items: center;
     justify-content: space-between;
-    width: 100vw; /* Ensure the header spans the full width of the viewport */
-    box-sizing: border-box; /* Include padding in width calculations */
-    border-bottom: 3px solid #00c6ff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     position: relative;
 }
 
@@ -19,7 +15,8 @@
 .logo {
     height: 80px;
     width: auto;
-    margin-left: 15px;
+    margin-top: 0.3cm;
+    margin-left: 15.5cm;
 }
 
 .nav-links {
@@ -29,14 +26,14 @@
 }
 
 .nav-link {
-    color: #00c6ff; /* White for a modern, clean look */
+    color: #002D5E; /* White for a modern, clean look */
     margin: 0 20px; /* Adjust spacing */
     text-decoration: none;
     font-weight: bolder;
-    font-size: 16px; /* Slightly smaller font size for elegance */
+    font-size: 30px; /* Slightly smaller font size for elegance */
     text-transform: uppercase; /* Capitalize links for a modern feel */
     letter-spacing: 1px; /* Add some letter spacing for a chic style */
-    transition: color 0.3s ease; /* Smooth color transition on hover *
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .nav-link:hover {
@@ -53,6 +50,7 @@
     font-size: 18px;
     border-radius: 25px;
     cursor: pointer;
+    margin-bottom: 0.5cm;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     margin-right: 15px; /* Add margin to avoid button sticking to the right edge */

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Header.css";
-import Eco2MLogo from "../assets/Eco2MLogo.png"; // Adjust the path according to where your logo image is stored
+import Eco2MLogo from "../assets/SBMLogo.png"; // Adjust the path according to where your logo image is stored
 
 function Header() {
   const user = JSON.parse(localStorage.getItem("user")); // Retrieve user data from local storage
@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <header className="eco2m-header">
+    <header className="sbm-header">
       <div className="logo-container">
         <Link to="/">
           <img src={Eco2MLogo} alt="Eco2M Logo" className="logo" />
