@@ -112,7 +112,6 @@ function RegisterPage() {
       interests: formData.interests,
       countryId: formData.countryId,
       bio: formData.bio,
-      meetLink: formData.meetLink, // Include the meet link in the registration data
     };
 
     axios
@@ -187,9 +186,7 @@ function RegisterPage() {
                 className="input-field"
                 required
               />
-              {passwordError && (
-                <p className="error-message">{passwordError}</p>
-              )}
+              {passwordError && <p className="error-message">{passwordError}</p>}
             </div>
 
             {/* Bio Section */}
@@ -205,11 +202,7 @@ function RegisterPage() {
                 className="bio-textarea"
                 rows={1}
               ></textarea>
-              <span
-                className={`char-counter ${
-                  charCount === 100 ? "limit-reached" : ""
-                }`}
-              >
+              <span className={`char-counter ${charCount === 100 ? 'limit-reached' : ''}`}>
                 {charCount}/100
               </span>
             </div>
@@ -235,15 +228,7 @@ function RegisterPage() {
                 ))}
               </select>
             </div>
-            <input
-              type="text"
-              name="meetLink"
-              placeholder="Meeting Link (Google Meet or Zoom)"
-              value={formData.meetLink}
-              onChange={handleChange}
-              className="input-field"
-              required
-            />
+
             <p className="interests-header">
               Select the areas in which you want connect 
             </p>
@@ -252,9 +237,7 @@ function RegisterPage() {
                 <div
                   key={interest.interestId}
                   className={`interest-bubble ${
-                    formData.interests.includes(interest.interestId)
-                      ? "selected"
-                      : ""
+                    formData.interests.includes(interest.interestId) ? "selected" : ""
                   }`}
                   onClick={() => handleInterestChange(interest.interestId)}
                 >

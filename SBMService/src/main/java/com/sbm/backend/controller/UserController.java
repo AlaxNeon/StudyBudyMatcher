@@ -1,20 +1,19 @@
 package com.sbm.backend.controller;
 
-import java.sql.Timestamp;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import com.sbm.backend.dto.UserDTO;
 import com.sbm.backend.dto.UserRegistrationDTO;
+import java.sql.Timestamp;
+
 import com.sbm.backend.model.CountryEntity;
 import com.sbm.backend.model.ProfileEntity;
 import com.sbm.backend.model.UserEntity;
 import com.sbm.backend.service.CountryService;
 import com.sbm.backend.service.ProfileService;
 import com.sbm.backend.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +43,7 @@ public class UserController {
 	@PostMapping("/register")
 	public ResponseEntity<?> registerUser(@RequestBody UserRegistrationDTO userDto) {
 	    if (userDto.getBio() == null || userDto.getBio().trim().isEmpty()) {
-	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Bio is required."); // Add this validation
+	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Bio is required.");
 	    }
 
 	    if (userService.existsByEmail(userDto.getEmail())) {
@@ -55,33 +54,27 @@ public class UserController {
 	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Full Name already exists");
 	    }
 
-	    // Create a new UserEntity based on the received DTO
 	    UserEntity user = new UserEntity();
 	    user.setFullName(userDto.getFullName());
 	    user.setEmail(userDto.getEmail());
 	    user.setPassword(userDto.getPassword());
-	    user.setCreatedAt(new Timestamp(System.currentTimeMillis())); // Set created time
+	    user.setCreatedAt(new Timestamp(System.currentTimeMillis()));
+	    user.setMeetLink(userDto.getMeetLink()); // Set the meeting link
 
-	    // Save the user
 	    UserEntity registeredUser = userService.registerUser(user);
 
-	    // Create a profile for the new user
 	    ProfileEntity profile = new ProfileEntity();
 	    profile.setUser(registeredUser);
-
-	    // Fetch the CountryEntity by ID and set it in the profile
-	    CountryEntity country = countryService.findById(userDto.getCountryId()); // Assuming you have a countryService to fetch country
-	    profile.setCountry(country); // Set the country entity
-	    profile.setBio(userDto.getBio()); // Set the bio from the DTO
-
-	    // Save the profile
+	    CountryEntity country = countryService.findById(userDto.getCountryId());
+	    profile.setCountry(country);
+	    profile.setBio(userDto.getBio());
+	    profile.setMeetLink(userDto.getMeetLink());
 	    profileService.createOrUpdateProfile(profile);
-
-	    // Save the user's interests
 	    userService.saveUserInterests(registeredUser, userDto.getInterests());
 
 	    return ResponseEntity.ok(registeredUser);
 	}
+
 
 
 

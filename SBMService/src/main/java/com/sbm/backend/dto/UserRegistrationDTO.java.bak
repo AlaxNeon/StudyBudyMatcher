@@ -3,24 +3,15 @@ package com.sbm.backend.dto;
 import java.util.List;
 
 public class UserRegistrationDTO {
+
     private String fullName;
     private String email;
     private String password;
-    private List<Long> interests; 
-    private Long countryId; 
-    private String bio; 
-    private String meetLink; // For meeting link
+    private List<Long> interests; // List of interest IDs
+    private Long countryId; // Single country ID
+    private String bio; // Field to hold bio
 
-    // Getter and Setter for meetLink
-    public String getMeetLink() {
-        return meetLink;
-    }
-
-    public void setMeetLink(String meetLink) {
-        this.meetLink = meetLink;
-    }
-
-    // Other getters and setters...
+    // Getters and Setters
     public String getFullName() {
         return fullName;
     }

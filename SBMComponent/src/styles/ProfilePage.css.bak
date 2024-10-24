@@ -69,7 +69,6 @@
 
 .friends-list li {
     padding: 5px 0;
-    cursor: pointer;
     color: white;
 }
 
@@ -90,85 +89,14 @@
   
   /* Styling for the Bio section */
 .profile-bio {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     font-style: italic;
-}
-.profile-bio-title, .profile-location-title, .userInterests-title{
-    color: yellow;
 }
 
 /* Styling for the Location section */
 .profile-location {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 5px;
-}
-
-.meet-room-button{
-    background-color: yellow;
-    color: black;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: larger;
-    border: none;
-    cursor: pointer;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-.meet-room-button:hover{
-    background-color: black;
     color: yellow;
 }
-
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: #7e34695e;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .close-button {
-    background-color: red;
-    color: white;
-    font-weight: bolder;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-
-  .close-button:hover{
-    background-color: darkred;
-  }
-
-  .modal-content-chat, .modal-content-meet{
-    background-color: yellow;
-    margin-right: 0.5cm;
-    color: black;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: larger;
-    border: none;
-    cursor: pointer;
-    max-width: 100%;
-    border-radius: 15px;
-  }
-  
-  .modal-content-chat:hover, .modal-content-meet:hover{
-    background-color: black;
-    color: yellow;
-  }
