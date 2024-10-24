@@ -11,4 +11,3 @@ import com.sbm.backend.model.ProfileEntity;
 public interface ProfileRepository extends JpaRepository<ProfileEntity, Long> {
     Optional<ProfileEntity> findByUserUserId(Long userId);
 }
-

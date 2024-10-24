@@ -7,14 +7,15 @@ function AboutUsPage() {
             <div className="text-box">
                 <h1>About Us</h1>
                 <p>
-                    Welcome to Eco2M – Eco Match Maker, where our mission is to unite individuals who share a common passion
-                    for sustainability and environmental stewardship. We believe that when people come together with a shared
-                    vision for preserving and enhancing our ecosystem, their collective impact can be far greater than any
-                    single effort.
+                Welcome to Study Buddy! 
+                We are passionate about connecting students with the resources they need to excel in their studies. 
+                Whether you’re preparing for exams, working on assignments, or collaborating with peers, 
+                Study Buddy is here to provide the tools and support to enhance your learning experience.
                 </p>
                 <p>
-                    At Eco2M, we understand that addressing environmental challenges requires collaboration and synergy. Our
-                    platform is designed to connect like-minded individuals who are committed to making a positive difference.
+                At Study Buddy, our mission is to make learning easier and more accessible.
+                 We strive to create a community where students can share knowledge, 
+                find study materials, and track their academic progress in a fun and engaging way.
                 </p>
             </div>
         </div>

@@ -1,5 +1,5 @@
 .register-page {
-    background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\ecosystem.jpg');
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -31,14 +31,16 @@ form {
 input, select {
     display: block;
     margin: 10px auto;
-    padding: 10px;
-    width: 40%;
-    max-width: 300px;
-    min-width: 500px; 
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 18px; /* Bigger font size for inputs and selects */
+    transition: border 0.3s ease;
+}
+input:focus, select:focus {
+    border: 2px solid #00b4d8; /* Highlight on focus */
 }
 
 /* New styles for Bio section */
@@ -72,23 +74,23 @@ input, select {
 }
 
 .register-button {
-    background-color: yellow;
+    background-color:#fca311;
     font-size: 20px;
     font-weight: bold;
-    color: black;
+    color:  white;
     padding: 10px 20px;
-    border: none;
+    border-radius: 50px;
     cursor: pointer;
     margin-top: 20px;
     width: 100%; /* Full width relative to the form */
     max-width: 100%;
     box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .register-button:hover {
-    background-color: black;
-    color: yellow;
+    background-color:  #e85d04;
+    transform: scale(1.05); /* Gentle zoom on hover */
 }
 
 .interests-header {
@@ -108,25 +110,24 @@ input, select {
 }
 
 .interest-bubble {
-    padding: 10px 15px;
-    font-weight: bolder;
-    background-color: rgb(0, 0, 0); /* Default black background */
-    color: rgb(255, 255, 255); /* White text */
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #0077b6; /* Default black background */
+    color: white; /* White text */
     border-radius: 20px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .interest-bubble.selected {
-    background-color: yellow; /* Yellow background when selected */
+    background-color: #90e0ef;
     color: black; /* Black text when selected */
     cursor: default; /* Remove pointer cursor for selected */
 }
 
 /* Hover effect only for non-selected interest bubbles */
-.interest-bubble:not(.selected):hover {
-    background-color: black; /* Hover background for unselected interests */
-    color: yellow; /* Hover text color for unselected interests */
+.interest-bubble:hover:not(.selected) {
+    transform: scale(1.1); /* Slight enlargement on hover */
 }
 
 /* Add styling for bio counter */
@@ -140,34 +141,27 @@ select {
     display: block;
 }
 .bio-container {
-    position: relative;
-    width: 100%; /* Adjust width as necessary */
+    width: 100%;
+    max-width: 600px; /* Center the bio box */
+    margin: auto;
   }
   
   .bio-textarea {
-    resize: none; /* Disable manual resize */
-    overflow: hidden; /* Hide the scrollbar */
-    width: 50%; /* Make it responsive */
-    font-size: 16px; /* Font size */
-    padding: 10px; /* Add padding */
-    box-sizing: border-box; /* Include padding in width calculation */
-    border: 1px solid #ccc; /* Add a light border */
-    border-radius: 4px; /* Rounded corners */
-    min-height: 80px; /* Minimum height */
-    line-height: 1.4; /* Line height */
-    position: relative;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    min-height: 100px;
+    line-height: 1.5;
+    font-size: 16px;
   }
   
   .char-counter {
-    position: absolute;
-    bottom: 5px;
-    right: 6.8cm;
-    font-size: 12px;
-    color: #555; /* Default color */
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    padding: 2px 4px;
-    border-radius: 3px;
-    margin-bottom: 3px;
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #999;
   }
   
   .char-counter.limit-reached {
@@ -185,9 +179,16 @@ select {
 
 /* Optional: Styling for the select dropdown */
 .country-dropdown { 
-    text-align: center;
-    font-size: 20px;
-    background-color: rgb(35, 193, 59);
-    color: black;
-    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #34a853;
+    background-color: #34a853; /* Eco-friendly green */
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.country-dropdown:hover {
+    background-color: #28a745; /* Darker green on hover */
 }

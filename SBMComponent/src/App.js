@@ -23,8 +23,8 @@ function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/friends" element={<FriendsPage />} />
-                    <Route path="/chats" element={<ChatPage />} />
-                    <Route path="/chat/:friendId" element={<ChatRoom />} />
+                    {/* <Route path="/chats" element={<ChatPage />} />
+                    <Route path="/chat/:friendId" element={<ChatRoom />} /> */}
                     <Route path="/about" element={<AboutUsPage />} />
                     <Route path="/contact" element={<ContactUsPage />} />
                 </Routes>

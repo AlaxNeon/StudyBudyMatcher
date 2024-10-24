@@ -101,7 +101,7 @@ function RegisterPage() {
     }
 
     if (formData.interests.length === 0) {
-      setErrorMessage("Please select at least one interest.");
+      setErrorMessage("Please select at least one subject.");
       return;
     }
 
@@ -147,7 +147,7 @@ function RegisterPage() {
               <input
                 type="text"
                 name="fullName"
-                placeholder="🤩Full Name🤩"
+                placeholder="Full Name"
                 value={formData.fullName}
                 onChange={handleChange}
                 className="input-field"
@@ -158,7 +158,7 @@ function RegisterPage() {
               <input
                 type="email"
                 name="email"
-                placeholder="📧Email - Id📧"
+                placeholder="Email - Id"
                 value={formData.email}
                 onChange={handleChange}
                 className="input-field"
@@ -169,7 +169,7 @@ function RegisterPage() {
               <input
                 type="password"
                 name="password"
-                placeholder="💀Password💀"
+                placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}
                 className="input-field"
@@ -180,7 +180,7 @@ function RegisterPage() {
               <input
                 type="password"
                 name="confirmPassword"
-                placeholder="☠️Confirm Password☠️"
+                placeholder="Confirm Password"
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 className="input-field"
@@ -194,7 +194,7 @@ function RegisterPage() {
               <textarea
                 id="bio"
                 name="bio"
-                placeholder="😇Biography: ❤️Tell us about yourself✨..."
+                placeholder="Biography: Tell us about yourself..."
                 value={formData.bio}
                 onChange={handleBioChange}
                 onInput={autoResize}
@@ -230,8 +230,7 @@ function RegisterPage() {
             </div>
 
             <p className="interests-header">
-              Select all the options, in which you wish to participate to save
-              our ecosystem
+              Select the areas in which you want connect 
             </p>
             <div className="interests-options">
               {interestsOptions.map((interest) => (
@@ -248,7 +247,7 @@ function RegisterPage() {
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <button type="submit" className="register-button">
-              🥳Register🥳
+              Register
             </button>
           </form>
         </div>

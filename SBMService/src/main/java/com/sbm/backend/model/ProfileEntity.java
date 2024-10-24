@@ -18,9 +18,9 @@ public class ProfileEntity {
 
     private String bio; // Field for user bio
 
-    @ManyToOne // Assuming you want a ManyToOne relationship with CountryEntity
+    @ManyToOne // Assuming a ManyToOne relationship with CountryEntity
     @JoinColumn(name = "country_id") // Foreign key to reference country
-    private CountryEntity country; // New field for country
+    private CountryEntity country; // Field for country
 
     // Getters and Setters
     public Long getProfileId() {

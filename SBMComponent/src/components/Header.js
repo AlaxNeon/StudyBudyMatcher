@@ -34,9 +34,10 @@ function Header() {
             <Link to="/friends" className="nav-link">
               Friends
             </Link>
-            <Link to="/chats" className="nav-link">
+            
+            {/* <Link to="/chats" className="nav-link">
               Chats
-            </Link>
+            </Link> */}
 
             {/* These links are between Chat and Logout */}
             <Link to="/about" className="nav-link">

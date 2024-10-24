@@ -3,11 +3,12 @@ package com.sbm.backend.dto;
 import java.util.List;
 
 public class UserRegistrationDTO {
+
     private String fullName;
     private String email;
     private String password;
     private List<Long> interests; // List of interest IDs
-    private Long countryId; // Change to Long for a single country ID
+    private Long countryId; // Single country ID
     private String bio; // Field to hold bio
 
     // Getters and Setters
@@ -42,20 +43,20 @@ public class UserRegistrationDTO {
     public void setInterests(List<Long> interests) {
         this.interests = interests;
     }
-    
-    public Long getCountryId() { // Getter for countryId
+
+    public Long getCountryId() {
         return countryId;
     }
 
-    public void setCountryId(Long countryId) { // Setter for countryId
+    public void setCountryId(Long countryId) {
         this.countryId = countryId;
     }
 
-    public String getBio() { // Getter for bio
+    public String getBio() {
         return bio;
     }
 
-    public void setBio(String bio) { // Setter for bio
+    public void setBio(String bio) {
         this.bio = bio;
     }
 }

@@ -1,9 +1,13 @@
-.eco2m-header {
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
+.sbm-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100vw; /* Ensure the header spans the full width of the viewport */
+    box-sizing: border-box; /* Include padding in width calculations */
+    border-bottom: 3px solid #00c6ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -13,9 +17,9 @@
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
     width: auto;
-    margin-left: 1cm;
+    margin-left: 15px;
 }
 
 .nav-links {
@@ -25,32 +29,37 @@
 }
 
 .nav-link {
-    color: rgb(0, 95, 9);
-    margin: 0px 35px; /* Adjust the spacing between links */
+    color: #00c6ff; /* White for a modern, clean look */
+    margin: 0 20px; /* Adjust spacing */
     text-decoration: none;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: bolder;
+    font-size: 16px; /* Slightly smaller font size for elegance */
+    text-transform: uppercase; /* Capitalize links for a modern feel */
+    letter-spacing: 1px; /* Add some letter spacing for a chic style */
+    transition: color 0.3s ease; /* Smooth color transition on hover *
 }
 
 .nav-link:hover {
-    color: yellow;
+    color: #00c6ff; /* Highlight links with the gradient color */
     text-decoration: underline;
 }
 
 
 .header-button {
-    margin-left: 0.6cm;
-    background-color: yellow; /* Yellow background */
-    color: black; /* Black text */
-    border: none; /* No border */
-    padding: 10px 20px; /* Adjust padding for spacing */
-    font-size: 16px; /* Adjust font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center the text */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    background-color: #00c6ff; 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-right: 15px; /* Add margin to avoid button sticking to the right edge */
 }
 
 .header-button:hover {
-    background-color: rgb(0, 0, 0); /* Change background on hover */
-    color: rgb(225, 255, 0); /* Change text color on hover */
+    background-color: white;
+    color: #00c6ff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
