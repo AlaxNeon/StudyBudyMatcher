@@ -1,44 +1,37 @@
 .contact-us-page {
-    /* background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\EcoContactUs.png'); */
-    background-repeat: no-repeat; /* Ensure the logo doesn't repeat */
-    background-position: center; /* Center the logo */
-    background-size: contain;
-    background-color: black; /* Fallback for no image */
-    min-height: 84.2vh; /* Ensure full screen height */
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient background */
+    color: #ffffff; /* White text for high contrast */
+    padding: 60px 20px; /* Generous padding for spacing */
+    min-height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contact-box {
-    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
-    padding: 10px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 1000px; /* Limit max width */
-    text-align: center;
-    margin-top: 0.5cm;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    flex-direction: column;
+    text-align: center; /* Center the content */
 }
 
 .contact-us-page h1 {
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(68, 61, 1);
+    font-size: 48px; /* Large font size for the heading */
+    font-family: 'Arial', sans-serif; /* Simple, modern font */
+    color: #ffffff; /* White text for contrast */
+    margin-bottom: 30px; /* Space below the heading */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    text-transform: uppercase; /* Capitalize heading */
 }
 
 .contact-us-page p, .contact-us-page a {
-    margin: 20px 0;
-    font-weight: 600;
-    font-size: 26px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #003d3a;
+    font-size: 20px; /* Simple, readable font size */
+    font-family: 'Roboto', sans-serif; /* Clean, modern body font */
+    color: #e0f7fa; /* Light blue color for text */
+    margin: 15px 0; /* Space between paragraphs */
 }
 
 .contact-us-page ul {
     list-style: none;
     padding: 0;
+    margin: 20px 0; /* Space between list and surrounding elements */
+    font-size: 18px; /* Simple list font size */
+    color: #e0f7fa; /* Light blue color for list items */
 }
 
 .contact-us-page ul li {
@@ -46,10 +39,21 @@
 }
 
 .contact-us-page a {
-    color: rgb(144, 139, 3);
-    text-decoration: none;
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* No underline for a clean look */
+    border-bottom: 1px solid transparent; /* Add a subtle effect */
+    transition: border-bottom 0.3s; /* Smooth transition for hover */
 }
 
 .contact-us-page a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #ffffff; /* Underline effect on hover */
+}
+@media (max-width: 768px) {
+    .contact-us-page h1 {
+        font-size: 36px; /* Adjust heading size for smaller screens */
+    }
+
+    .contact-us-page p, .contact-us-page ul {
+        font-size: 16px; /* Adjust font size for readability on mobile */
+    }
 }

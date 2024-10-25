@@ -6,8 +6,6 @@ import RegisterPage from './components/RegisterPage';
 import LoginPage from './components/LoginPage';
 import ProfilePage from './components/ProfilePage';
 import FriendsPage from './components/FriendsPage';
-import ChatPage from './components/ChatPage';
-import ChatRoom from './components/ChatRoom';
 import AboutUsPage from './components/AboutUsPage';
 import ContactUsPage from './components/ContactUsPage';
 import './styles/App.css';
@@ -23,8 +21,6 @@ function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/friends" element={<FriendsPage />} />
-                    {/* <Route path="/chats" element={<ChatPage />} />
-                    <Route path="/chat/:friendId" element={<ChatRoom />} /> */}
                     <Route path="/about" element={<AboutUsPage />} />
                     <Route path="/contact" element={<ContactUsPage />} />
                 </Routes>

@@ -1,42 +1,56 @@
 .about-us-page {
-    background-color: #a2f901; /* Set the background to black */
-     background-color: #e5fe05;
-    background-repeat: no-repeat; /* Ensure the logo doesn't repeat */
-    background-position: center; /* Center the logo */
-    background-size: 150px 150px; /* Adjust logo size to fit within the background */
-    color: white; /* Set text color to white for visibility */
-    padding: 50px 20px; /* Add some padding */
-    min-height: 100vh; /* Ensure the page takes the full height of the viewport */
-    text-align: center; /* Center the text */
+    background: linear-gradient(135deg, #56ccf2, #2f80ed); /* New gradient for a distinct look */
+    color: #fff; /* White text for good contrast */
+    padding: 60px 30px; /* Increased padding for better spacing */
+    min-height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center; /* Center the text */
+    position: relative; /* Needed for positioning any elements inside */
+    font-family: 'Montserrat', sans-serif; /* Use a modern, professional font */
 }
 
 .text-box {
-    background-color: rgba(6, 80, 44, 0.7); /* White background with transparency */
-    padding: 40px; /* Add some padding for spacing */
-    border-radius: 15px; /* Slightly round the corners */
-    width: 80%; /* Adjust width, can be customized */
-    max-width: 900px; /* Limit the width */
-    text-align: center; /* Center the text inside */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
-    
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    padding: 50px; /* Increased padding for a spacious layout */
+    border-radius: 20px; /* Rounded corners for a modern look */
+    width: 90%; /* Slightly wider than before */
+    max-width: 1000px; /* Increased max-width */
+    text-align: center; /* Text stays centered */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for more depth */
 }
 
 .about-us-page h1{
     font-size: 50px;
     font-family: 'Playfair Display', serif;
-    color:#ffc107(68, 61, 1);
-    margin-bottom: 20px;
+    color:#ffda79;
+    margin-bottom: 25px;
+    text-transform: uppercase; /* Make heading text uppercase */
+    letter-spacing: 2px;
 }
 
 
 .about-us-page p {
-    margin: 20px 0;
-    font-weight: 400;
-    font-size: 22px;
-    font-family:'Roboto', sans-serif; /* Clean, readable body font */
-    color: #ffffff; /* White text color for contrast */
+    margin: 25px 0;
+    font-weight: 300; /* Light font weight for softer look */
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; /* Same font as before, for readability */
+    line-height: 1.6; /* Increased line height for better readability */
+    color: #e0e0e0; /* Light grey text for a softer feel */
+}
+.about-us-page .highlight {
+    color: #ffeaa7; /* Use a highlighted color to emphasize key words */
+    font-weight: 500; /* Slightly bold for emphasis */
+}
+/* Optional additional styling for responsiveness */
+@media (max-width: 768px) {
+    .about-us-page h1 {
+        font-size: 36px; /* Adjust heading size for smaller screens */
+    }
+
+    .about-us-page p {
+        font-size: 18px; /* Adjust paragraph font size for smaller screens */
+    }
 }
