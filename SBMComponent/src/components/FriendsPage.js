@@ -90,7 +90,7 @@ function FriendsPage() {
                 searchQuery ? (
                     <h2 className="no-friends-message">Can't find your study buddy</h2>
                 ) : (
-                    <h2 className="no-friends-message"><i>,</i> You Have connected to everyone present here!!</h2>
+                    <h2 className="no-friends-message">You Have connected to everyone present here!!</h2>
                 )
             )}
         </div>

@@ -9,8 +9,7 @@ function ProfilePage() {
   const [interests, setInterests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedFriend, setSelectedFriend] = useState(null); // For modal
-  const navigate = useNavigate(); // Updated: Use useNavigate instead of useHistory
+  const navigate = useNavigate();
 
   // Retrieve user data from local storage
   const user = JSON.parse(localStorage.getItem("user"));
@@ -28,7 +27,6 @@ function ProfilePage() {
     axios
       .get(`http://localhost:8080/api/profiles/user/${userId}`)
       .then((response) => {
-        console.log("Profile data:", response.data); // Log the profile data
         setProfile(response.data);
         return axios.get(
           `http://localhost:8080/api/user-interests/user/${userId}`
@@ -65,8 +63,8 @@ function ProfilePage() {
           .delete(`http://localhost:8080/api/users/${userId}`)
           .then(() => {
             alert("Your account has been deleted.");
-            localStorage.removeItem("user"); // Clear localStorage
-            navigate("/"); // Redirect to home page
+            localStorage.removeItem("user");
+            navigate("/");
           })
           .catch((error) => {
             console.error("Error deleting account:", error);
@@ -76,14 +74,13 @@ function ProfilePage() {
     }
   };
 
-  // Handle opening the friend modal
+  // Handle friend click to open the friend's meeting link
   const handleFriendClick = (friend) => {
-    setSelectedFriend(friend);
-  };
-
-  // Handle closing the modal
-  const handleCloseModal = () => {
-    setSelectedFriend(null);
+    if (friend.meetLink) {
+      window.open(friend.meetLink, "_blank");
+    } else {
+      alert("Meeting link not available for this friend.");
+    }
   };
 
   if (loading) {
@@ -97,8 +94,6 @@ function ProfilePage() {
   if (!profile) {
     return <p>Profile not found or incomplete data.</p>;
   }
-
-  console.log("Meet Link for user:", profile?.user?.meetLink); // Log the meet link
 
   return (
     <div className="profile-page">
@@ -122,15 +117,15 @@ function ProfilePage() {
 
       {/* My Meet Room Button */}
       {profile.meetLink ? (
-  <button
-    className="meet-room-button"
-    onClick={() => window.open(profile.meetLink, "_blank")}
-  >
-    My Meeting Room
-  </button>
-) : (
-  <p>No meeting link provided for your profile.</p>
-)}
+        <button
+          className="meet-room-button"
+          onClick={() => window.open(profile.meetLink, "_blank")}
+        >
+          My Meeting Room
+        </button>
+      ) : (
+        <p>No meeting link provided for your profile.</p>
+      )}
 
       <div className="friends-list">
         <h2>Friends</h2>
@@ -161,31 +156,8 @@ function ProfilePage() {
       <button className="delete-account-button" onClick={handleDeleteAccount}>
         Delete Account
       </button>
-
-      {/* Modal for friend options */}
-      {selectedFriend && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>How do you wish to connect to {selectedFriend.fullName}</h2>
-            <button className="modal-content-chat"
-              onClick={() => navigate(`/chat/${selectedFriend.userId}`)}
-            >
-              {selectedFriend.fullName}
-            </button>
-            {selectedFriend.meetLink && (
-              <button className="modal-content-meet"
-                onClick={() => window.open(selectedFriend.meetLink, "_blank")}
-              >
-                Join {selectedFriend.fullName.split(" ")[0]}'s Meet Room
-              </button>
-            )}
-            <button className="close-button" onClick={handleCloseModal}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </div>
-  );}
+  );
+}
 
 export default ProfilePage;
