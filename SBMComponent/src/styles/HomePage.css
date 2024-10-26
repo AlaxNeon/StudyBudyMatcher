@@ -1,9 +1,9 @@
 .home-page {
-    background-image: url("C:\Users\Admin\Desktop\STUDY BUDDY MATCHER\StudyBudyMatcher\SBMComponent\public\images\home_page_bg.jpg"); 
+    background-image: url("https://i.pinimg.com/564x/4f/98/ad/4f98ad4d433374cc805f90be45fe4afa.jpg"); 
    background-size: cover;
    background-position: center;
    text-align: center;
-   color:#00c6ff;
+   color:#002D5E;
    min-height: 84.2vh;
    display: flex;
    justify-content: center;
@@ -21,7 +21,7 @@
 }
 
 .login-btn, .register-btn{
-   background-color:#00c6ff;
+   background-color:#002D5E;
    color: white;
    padding: 10px 20px;
    margin: 20px;
@@ -31,7 +31,7 @@
 
 .login-btn:hover, .register-btn:hover {
    background-color: #ffffff;
-   color: #00c6ff;
+   color: #002D5E;
 }
 
 .home-page-heading{

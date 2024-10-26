@@ -1,5 +1,5 @@
 .friends-page {
-    background-color:bisque;
+    background-image: url("https://i.pinimg.com/564x/4f/98/ad/4f98ad4d433374cc805f90be45fe4afa.jpg"); ;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -33,7 +33,9 @@
 }
 
 .heading {
-    color: #ffffff;
+    color: #002D5E;
+    font-size: 10cm;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     white-space: nowrap; /* Prevents the text from wrapping to a new line */
     font-size: 3rem; /* Adjust the size as needed */
     text-align: center; /* Center align the heading */
@@ -41,24 +43,24 @@
 }
 
 .no-friends-message{
-    color: #ffffff;
+    color: #002D5E;
     white-space: nowrap; /* Prevents the text from wrapping to a new line */
     font-size: 3rem; /* Adjust the size as needed */
     text-align: center; /* Center align the heading */
 }
 
 .person-card {
-    background-color: rgba(128, 128, 128, 0.5); /* Greyish background with transparency */
+    background-color: rgb(222, 218, 218); /* Greyish background with transparency */
     padding: 0px 10px 35px 20px;
     border-radius: 10px;
     width: 750px;
     text-align: left;
-    color: white;
+    color: #000000;
     position: relative;
 }
 
 .fullName{
-    color: rgb(234, 255, 0);
+    color: #002D5E(234, 255, 0);
     font-size: 30px;
     font-weight: 750;
 }
@@ -73,8 +75,8 @@
     position: absolute;
     align-content: center;
     bottom: 10px;
-    background-color: yellow;
-    color: rgb(0, 0, 0);
+    background-color: #002D5E;
+    color:white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -83,11 +85,11 @@
 }
 
 .connect-button:hover {
-    background-color: rgb(0, 0, 0);
-    color: yellow;
+    background-color:white;
+    color: #002D5E;
 }
 
 .connected-button {
-    background-color: gray; /* Different color to show it's already connected */
+    background-color: #002D5E; /* Different color to show it's already connected */
     cursor: not-allowed;
 }

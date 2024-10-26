@@ -1,16 +1,13 @@
 .profile-page {
-    /* background-image: url('D:\Somnath\JAIN\SEMESTER-3\EVS\Activity - 2\Eco2M - EcoMatchMaker\Eco2MComponent\eco2m\public\images\ecosystemProfile.jpg'); */
-    background-size: cover;
-    background-position: center;
+    background-image: url("https://i.pinimg.com/736x/4a/63/c9/4a63c937d5606964bc9ffe94b705c67d.jpg");
     min-height: 80vh;
-    background-color: black;
-    color: white;
     padding: 20px;
-    text-align: top;
+    color: #003d5b; /* Dark blue text color */
+    text-align: center; /* Center content */
 }
 
 .friends-list-names {
-    color: #ffffff; /* Change the color to white */
+    color: #003d5b; /* Dark blue color */
     font-size: 20px;
     font-style: italic;
     text-decoration: none; /* Remove the underline from the links */
@@ -18,7 +15,7 @@
 
 /* To ensure that the links don't revert to default styles on hover */
 .friends-list-names:hover {
-    color: #ffcc00; /* Optional: Change color on hover */
+    color:#012143; /* Teal color on hover */
     text-decoration: none;
 }
 
@@ -26,8 +23,8 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: yellow;
-    color: black;
+    background-color: #002D5E; /* Teal button */
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
@@ -35,29 +32,31 @@
 }
 
 .connect-friends-button:hover {
-    background-color: black;
-    color: yellow;
+    background-color:#012143; 
+    color: white;
 }
 
 .welcomeUser{
     font-size: 50px;
+    color: #002D5E;
 }
 
 .userInterests{
     font-size: 25px;
     font-style: italic;
+    color: #002D5E;
 }
 
 .friends-list {
     margin-top: 20px;
     text-align: left;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color:#f6f8f9f8; /* Light teal background */
     border-radius: 10px;
 }
 
 .friends-list h2 {
-    color: yellow;
+    color: #002D5E; 
     font-size: 30px;
     margin-bottom: 0.2cm;
 }
@@ -70,12 +69,12 @@
 .friends-list li {
     padding: 5px 0;
     cursor: pointer;
-    color: white;
+    color: #002D5E; /* Dark teal */
 }
 
 
 .delete-account-button {
-    background-color: red;
+    background-color: #d32f2f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -85,7 +84,7 @@
   }
   
   .delete-account-button:hover {
-    background-color: darkred;
+    background-color: #b71c1c;
   }
   
   /* Styling for the Bio section */
@@ -93,31 +92,39 @@
     font-size: 25px;
     margin-top: 10px;
     font-style: italic;
+    color: #002D5E;
+
+}
+.profile-location {
+    font-size: 25px;
+    margin-top: 5px;
+    color:#002D5E; /* Teal */
 }
 .profile-bio-title, .profile-location-title, .userInterests-title{
-    color: yellow;
+    color: #002D5E;
 }
 
 /* Styling for the Location section */
 .profile-location {
     font-size: 25px;
     margin-top: 5px;
+    color:#002D5E; /* Teal */
 }
 
 .meet-room-button{
-    background-color: yellow;
-    color: black;
+    background-color: #002D5E;
+    color: white;
     padding: 10px 20px;
     font-weight: bold;
     font-size: larger;
     border: none;
     cursor: pointer;
     max-width: 100%;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 .meet-room-button:hover{
-    background-color: black;
-    color: yellow;
+    background-color: #012143; /* Dark teal hover */
+    color: white;
 }
 
 
@@ -134,16 +141,16 @@
   }
   
   .modal-content {
-    background-color: #7e34695e;
+    background-color: #b2dfdb; /* Light teal background */
     padding: 20px;
     border-radius: 5px;
-    text-align: center;
+    text-align: center;;
   }
   
   .close-button {
-    background-color: red;
+    background-color: #d32f2f; /* Red close button */
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -152,23 +159,5 @@
   }
 
   .close-button:hover{
-    background-color: darkred;
-  }
-
-  .modal-content-chat, .modal-content-meet{
-    background-color: yellow;
-    margin-right: 0.5cm;
-    color: black;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: larger;
-    border: none;
-    cursor: pointer;
-    max-width: 100%;
-    border-radius: 15px;
-  }
-  
-  .modal-content-chat:hover, .modal-content-meet:hover{
-    background-color: black;
-    color: yellow;
+    background-color: #b71c1c;
   }

@@ -25,7 +25,7 @@ function LoginPage() {
     return (
         <div className="login-page">
             <div class="login-form">
-            <h1>Eco2M – Login</h1>
+            <h1>Login</h1>
             {errorMessage && <p className="error">{errorMessage}</p>}
             <form onSubmit={handleSubmit}>
                 <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />

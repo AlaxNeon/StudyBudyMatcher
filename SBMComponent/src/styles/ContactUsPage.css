@@ -2,7 +2,7 @@
     background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient background */
     color: #ffffff; /* White text for high contrast */
     padding: 60px 20px; /* Generous padding for spacing */
-    min-height: 100vh; /* Full viewport height */
+    min-height: 80vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;

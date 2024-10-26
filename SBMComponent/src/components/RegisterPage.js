@@ -141,7 +141,7 @@ function RegisterPage() {
   return (
     <div className="register-page">
       <div className="register-form">
-        <h1>Eco2M – Register</h1>
+        <h1>Register</h1>
         <div className="register-container">
           <form onSubmit={handleSubmit}>
             <div className="form-group">

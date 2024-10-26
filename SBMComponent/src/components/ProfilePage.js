@@ -9,8 +9,10 @@ function ProfilePage() {
   const [interests, setInterests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const [selectedFriend, setSelectedFriend] = useState(null); // For modal
+  const navigate = useNavigate(); // Updated: Use useNavigate instead of useHistory
 
+  // Retrieve user data from local storage
   const user = JSON.parse(localStorage.getItem("user"));
   const userId = user?.userId;
   const userFullName = user?.fullName?.split(" ")[0];
@@ -74,13 +76,14 @@ function ProfilePage() {
     }
   };
 
-  // Handle clicking on a friend's name
+  // Handle opening the friend modal
   const handleFriendClick = (friend) => {
-    if (friend.meetLink) {
-      window.open(friend.meetLink, "_blank"); // Open the friend's meeting link
-    } else {
-      alert(`${friend.fullName} has no meeting link provided.`);
-    }
+    setSelectedFriend(friend);
+  };
+
+  // Handle closing the modal
+  const handleCloseModal = () => {
+    setSelectedFriend(null);
   };
 
   if (loading) {
@@ -119,15 +122,15 @@ function ProfilePage() {
 
       {/* My Meet Room Button */}
       {profile.meetLink ? (
-        <button
-          className="meet-room-button"
-          onClick={() => window.open(profile.meetLink, "_blank")}
-        >
-          My Meeting Room
-        </button>
-      ) : (
-        <p>No meeting link provided for your profile.</p>
-      )}
+  <button
+    className="meet-room-button"
+    onClick={() => window.open(profile.meetLink, "_blank")}
+  >
+    My Meeting Room
+  </button>
+) : (
+  <p>No meeting link provided for your profile.</p>
+)}
 
       <div className="friends-list">
         <h2>Friends</h2>
@@ -158,8 +161,31 @@ function ProfilePage() {
       <button className="delete-account-button" onClick={handleDeleteAccount}>
         Delete Account
       </button>
+
+      {/* Modal for friend options */}
+      {selectedFriend && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2>How do you wish to connect to {selectedFriend.fullName}</h2>
+            <button className="modal-content-chat"
+              onClick={() => navigate(`/chat/${selectedFriend.userId}`)}
+            >
+              {selectedFriend.fullName}
+            </button>
+            {selectedFriend.meetLink && (
+              <button className="modal-content-meet"
+                onClick={() => window.open(selectedFriend.meetLink, "_blank")}
+              >
+                Join {selectedFriend.fullName.split(" ")[0]}'s Meet Room
+              </button>
+            )}
+            <button className="close-button" onClick={handleCloseModal}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
-  );
-}
+  );}
 
 export default ProfilePage;

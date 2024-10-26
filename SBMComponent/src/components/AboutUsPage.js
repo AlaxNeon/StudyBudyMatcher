@@ -4,7 +4,7 @@ import '../styles/AboutUsPage.css';
 function AboutUsPage() {
     return (
         <div className="about-us-page">
-            <div className="text-box">
+            <div className="text-box-1">
                 <h1>About Us</h1>
                 <p>
                 Welcome to Study Buddy! 
@@ -17,6 +17,11 @@ function AboutUsPage() {
                  We strive to create a community where students can share knowledge, 
                 find study materials, and track their academic progress in a fun and engaging way.
                 </p>
+            </div>
+            <div className="text-box-2">
+            <h1>Contact Us</h1>
+                <p>We’d love to hear from you! If you have any questions or need assistance, feel free to reach out to us!</p>
+                <p>Email Us: For general inquiries, please email us at <a href="mailto:support@studybuddy.com.">support@studybuddy.com</a></p>
             </div>
         </div>
     );

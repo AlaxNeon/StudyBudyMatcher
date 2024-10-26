@@ -59,10 +59,10 @@ function FriendsPage() {
             {/* Conditionally render the heading and search box */}
             {unconnectedPeople.length > 0 && (
                 <>
-                    <h1 className="heading">People Around You:</h1>
+                    <h1 className="heading">Find Your Study Buddy:</h1>
                     <input
                         type="text"
-                        placeholder="Search friends..."
+                        placeholder="Search your buddy"
                         className="search-box"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
@@ -88,9 +88,9 @@ function FriendsPage() {
                 </div>
             ) : (
                 searchQuery ? (
-                    <h2 className="no-friends-message">😔Could not find with such name...</h2>
+                    <h2 className="no-friends-message">Can't find your study buddy</h2>
                 ) : (
-                    <h2 className="no-friends-message"><i>😊Vola,</i> You Have connected to everyone present here!!</h2>
+                    <h2 className="no-friends-message"><i>,</i> You Have connected to everyone present here!!</h2>
                 )
             )}
         </div>

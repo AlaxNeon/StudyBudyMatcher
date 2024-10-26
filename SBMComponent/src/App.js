@@ -7,7 +7,7 @@ import LoginPage from './components/LoginPage';
 import ProfilePage from './components/ProfilePage';
 import FriendsPage from './components/FriendsPage';
 import AboutUsPage from './components/AboutUsPage';
-import ContactUsPage from './components/ContactUsPage';
+// import ContactUsPage from './components/ContactUsPage';
 import './styles/App.css';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/friends" element={<FriendsPage />} />
                     <Route path="/about" element={<AboutUsPage />} />
-                    <Route path="/contact" element={<ContactUsPage />} />
+                    {/* <Route path="/contact" element={<ContactUsPage />} /> */}
                 </Routes>
             </div>
         </Router>

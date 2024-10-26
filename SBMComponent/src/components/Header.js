@@ -18,7 +18,7 @@ function Header() {
     <header className="sbm-header">
       <div className="logo-container">
         <Link to="/">
-          <img src={Eco2MLogo} alt="Eco2M Logo" className="logo" />
+          <img src={Eco2MLogo} alt="SBM Logo" className="logo" />
         </Link>
       </div>
       <nav className="nav-links">
@@ -31,20 +31,12 @@ function Header() {
             <Link to="/profile" className="nav-link">
               Profile
             </Link>
-            <Link to="/friends" className="nav-link">
-              Friends
+           <Link to="/friends" className="nav-link">
+              Search
             </Link>
-            
-            {/* <Link to="/chats" className="nav-link">
-              Chats
-            </Link> */}
-
-            {/* These links are between Chat and Logout */}
+          
             <Link to="/about" className="nav-link">
               About Us
-            </Link>
-            <Link to="/contact" className="nav-link">
-              Contact Us
             </Link>
 
             <button onClick={handleLogout} className="header-button">
@@ -55,9 +47,6 @@ function Header() {
           <>
             <Link to="/about" className="nav-link">
               About Us
-            </Link>
-            <Link to="/contact" className="nav-link">
-              Contact Us
             </Link>
             <Link to="/login" className="header-button">
               Login
